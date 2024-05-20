@@ -1,0 +1,235 @@
+{% extends "layout.html" %}
+{% block body %}
+<style>
+    body {
+        background-image: url('/static/images/bg/2nd_project.jpg'); /* Replace '/path/to/your/image.jpg' with the path to your desired background image */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color:  #FFFFFF; /* Bright text color for readability */
+    }
+</style>
+<div class="container mt-5 pt-5">
+    <h2 class="text-center"  style="color: #666;">Enter the following details</h2>
+
+    <form action="/predict_second" method="post" class="mt-4">
+        <div class="form-group" ">
+            <label for="REF_NO">Reference Number:</label>
+            <input type="text" class="form-control" id="REF_NO" name="REF_NO" placeholder="Enter any Integer value" required>
+        </div>
+        <div class="form-group" >
+            <label for="children">Number of Children:</label>
+            <input type="text" class="form-control" id="children" name="children" placeholder="Enter the number of children you have " required>
+        </div>
+        <div class="form-group">
+    <label for="age_band">Age Band:</label>
+    <select class="form-control" id="age_band" name="age_band" required>
+        <option value="">Select Age Band</option>
+        <option value="18-21">18-21</option>
+        <option value="22-25">22-25</option>
+        <option value="26-30">26-30</option>
+        <option value="31-35">31-35</option>
+        <option value="36-40">36-40</option>
+        <option value="41-45">41-45</option>
+        <option value="45-50">45-50</option>
+        <option value="51-55">51-55</option>
+        <option value="55-60">55-60</option>
+        <option value="61-65">61-65</option>
+        <option value="65-70">65-70</option>
+        <option value="71+">71+</option>
+        <option value="Unknown">Unknown</option>
+    </select>
+</div>
+
+       <div class="form-group">
+    <label for="status">Status:</label>
+    <select class="form-control" id="status" name="status" required>
+        <option value="">Select Status</option>
+        <option value="Partner">Partner</option>
+        <option value="Single/Never Married">Single/Never Married</option>
+        <option value="Divorced/Separated">Divorced/Separated</option>
+        <option value="Widowed">Widowed</option>
+        <option value="Unknown">Unknown</option>
+    </select>
+</div>
+
+        <div class="form-group">
+    <label for="occupation">Occupation:</label>
+    <select class="form-control" id="occupation" name="occupation" required>
+        <option value="">Select Occupation</option>
+        <option value="Business Manager">Business Manager</option>
+        <option value="Retired">Retired</option>
+        <option value="Housewife">Housewife</option>
+        <option value="Secretarial/Admin">Secretarial/Admin</option>
+    </select>
+</div>
+
+        <div class="form-group">
+    <label for="occupation_partner">Occupation Partner:</label>
+    <select class="form-control" id="occupation_partner" name="occupation_partner" required>
+        <option value="">Select Occupation Partner</option>
+        <option value="Unknown">Unknown</option>
+        <option value="Secretarial/Admin">Secretarial/Admin</option>
+        <option value="Housewife">Housewife</option>
+        <option value="Professional">Professional</option>
+    </select>
+</div>
+<div class="form-group">
+    <label for="home_status">Home Status:</label>
+    <select class="form-control" id="home_status" name="home_status" required>
+        <option value="">Select Home Status</option>
+        <option value="Own Home">Own House</option>
+        <option value="Rent Privately">Rent Privately</option>
+        <option value="Live in Parental Hom">Live in Parental Home</option>
+    </select>
+</div>
+        <div class="form-group">
+    <label for="family_income">Family Income:</label>
+    <select class="form-control" id="family_income" name="family_income" required>
+        <option value="">Select Family Income</option>
+        <option value="<20,000, >=17,500">&lt;20,000, &ge;17,500</option>
+        <option value="<30,000, >=27,500">&lt;30,000, &ge;27,500</option>
+        <option value="<25,000, >=22,500">&lt;25,000, &ge;22,500</option>
+        <option value="<27,500, >=25,000">&lt;27,500, &ge;25,000</option>
+        <option value=">=35,000">&ge;35,000</option>
+        <option value="<22,500, >=20,000">&lt;22,500, &ge;20,000</option>
+        <option value="<15,000, >=12,500">&lt;15,000, &ge;12,500</option>
+        <option value="< 8,000, >= 4,000">&lt;8,000, &ge;4,000</option>
+        <option value="<12,500, >=10,000">&lt;12,500, &ge;10,000</option>
+        <option value="<17,500, >=15,000">&lt;17,500, &ge;15,000</option>
+        <option value="< 4,000">&lt;4,000</option>
+        <option value="<10,000, >= 8,000">&lt;10,000, &ge;8,000</option>
+        <option value="Unknown">Unknown</option>
+    </select>
+</div>
+
+       <div class="form-group">
+    <label for="self_employed">Self Employed:</label>
+    <select class="form-control" id="self_employed" name="self_employed" required>
+        <option value="">Select Yes or No</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+    </select>
+</div>
+<div class="form-group">
+    <label for="self_employed_partner">Self Employed Partner:</label>
+    <select class="form-control" id="self_employed_partner" name="self_employed_partner" required>
+        <option value="">Select Yes or No</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+    </select>
+</div>
+        <div class="form-group" >
+            <label for="year_last_moved">Year Last Moved:</label>
+            <input type="text" class="form-control" id="year_last_moved" name="year_last_moved" placeholder="Enter the year" required>
+        </div>
+        <div class="form-group" >
+            <label for="TVarea">TV Area:</label>
+            <input type="text" class="form-control" id="TVarea" name="TVarea" placeholder="Enter the TV area" required>
+        </div>
+        <div class="form-group" >
+            <label for="post_code">Post Code:</label>
+            <input type="text" class="form-control" id="post_code" name="post_code" placeholder="Enter Post_code" required>
+        </div>
+        <div class="form-group" >
+            <label for="post_area">Post Area:</label>
+            <input type="text" class="form-control" id="post_area" name="post_area" placeholder="Enter post_area" required>
+        </div>
+        <div class="form-group" >
+            <label for="Average_Credit_Card_Transaction">Average Credit Card Transaction:</label>
+            <input type="text" class="form-control" id="Average_Credit_Card_Transaction" name="Average_Credit_Card_Transaction" placeholder="Enter your Average Credit Card Transaction like value between 0.0 to 130.0" required>
+        </div>
+        <div class="form-group" >
+            <label for="Balance_Transfer">Balance Transfer:</label>
+            <input type="text" class="form-control" id="Balance_Transfer" name="Balance_Transfer" placeholder="Enter your Balance Transfer value between 0.0 to 130.0" required>
+        </div>
+        <div class="form-group" >
+            <label for="Term_Deposit">Term Deposit:</label>
+            <input type="text" class="form-control" id="Term_Deposit" name="Term_Deposit" placeholder="Enter Term Deposit value between 0.0 to 130.0" required>
+        </div>
+        <div class="form-group" >
+            <label for="Life_Insurance">Life Insurance:</label>
+            <input type="text" class="form-control" id="Life_Insurance" name="Life_Insurance" placeholder="Enter Life Insurance value between 0.0 to 130.0" required>
+        </div>
+        <div class="form-group">
+            <label for="Medical_Insurance">Medical Insurance:</label>
+            <input type="text" class="form-control" id="Medical_Insurance" name="Medical_Insurance" placeholder="Enter Medical Insurance value between 0.0 to 130.0" required>
+        </div>
+        <div class="form-group" >
+            <label for="Average_A_C_Balance">Average A/C Balance:</label>
+            <input type="text" class="form-control" id="Average_A_C_Balance" name="Average_A_C_Balance" placeholder="Enter Average Account balance value between 0.0 to 180.0 " required>
+        </div>
+        <div class="form-group" >
+            <label for="Personal_Loan">Personal Loan:</label>
+            <input type="text" class="form-control" id="Personal_Loan" name="Personal_Loan" placeholder="Enter Personal Loan value between 0.0 to 100.0" required>
+        </div>
+        <div class="form-group" >
+            <label for="Investment_in_Mutual_Fund">Investment in Mutual Fund:</label>
+            <input type="text" class="form-control" id="Investment_in_Mutual_Fund" name="Investment_in_Mutual_Fund" placeholder="Enter Investment in Mutual Fund value between 0.0 to 150.0" required>
+        </div>
+        <div class="form-group" >
+            <label for="Investment_Tax_Saving_Bond">Investment Tax Saving Bond:</label>
+            <input type="text" class="form-control" id="Investment_Tax_Saving_Bond" name="Investment_Tax_Saving_Bond" placeholder="Enter Investment Tax Saving bond value between 0.0 to 130.0" required>
+        </div>
+        <div class="form-group" >
+            <label for="Home_Loan">Home Loan:</label>
+            <input type="text" class="form-control" id="Home_Loan" name="Home_Loan" placeholder="Enter Home loan value between 0.0 to 50" required>
+        </div>
+        <div class="form-group" >
+            <label for="Online_Purchase_Amount">Online Purchase Amount:</label>
+            <input type="text" class="form-control" id="Online_Purchase_Amount" name="Online_Purchase_Amount" placeholder="Enter Online Purchase Amount " required>
+        </div>
+        <div class="form-group">
+    <label for="gender">Gender:</label>
+    <select class="form-control" id="gender" name="gender" required>
+        <option value="">Select Gender</option>
+        <option value="Female">Female</option>
+        <option value="Male">Male</option>
+        <option value="Unknown">Unknown</option>
+    </select>
+</div>
+
+       <div class="form-group">
+    <label for="region">Region:</label>
+    <select class="form-control" id="region" name="region" required>
+        <option value="">Select Region</option>
+        <option value="South East">South East</option>
+        <option value="East Anglia">East Anglia</option>
+        <option value="North">North</option>
+        <option value="Unknown">Unknown</option>
+        <option value="North West">North West</option>
+        <option value="West Midlands">West Midlands</option>
+        <option value="Scotland">Scotland</option>
+        <option value="East Midlands">East Midlands</option>
+        <option value="South West">South West</option>
+        <option value="Wales">Wales</option>
+        <option value="Northern Ireland">Northern Ireland</option>
+        <option value="Channel Islands">Channel Islands</option>
+        <option value="Isle of Man">Isle of Man</option>
+    </select>
+</div>
+
+        <div class="form-group">
+            <label for="Investment_in_Commodity">Investment in Commodity:</label>
+            <input type="text" class="form-control" id="Investment_in_Commodity" name="Investment_in_Commodity" placeholder="Enter Investment in commodity value between 0.0 to 130.0" required>
+        </div>
+        <div class="form-group">
+            <label for="Investment_in_Equity">Investment in Equity:</label>
+            <input type="text" class="form-control" id="Investment_in_Equity" name="Investment_in_Equity" placeholder="Enter investment in equity value between 0.0 to 130.0" required>
+        </div>
+        <div class="form-group" >
+            <label for="Investment_in_Derivative">Investment in Derivative:</label>
+            <input type="text" class="form-control" id="Investment_in_Derivative" name="Investment_in_Derivative" placeholder="Enter Investment in Derivative value between 0.0 to 130.0" required>
+        </div>
+        <div class="form-group" >
+            <label for="Portfolio_Balance">Portfolio Balance:</label>
+            <input type="text" class="form-control" id="Portfolio_Balance" name="Portfolio_Balance" placeholder="Enter Portfolio Balance value between 0.0 to 130.0" required>
+        </div>
+        <!-- Add more input fields for other columns -->
+        <!-- Repeat the above code for each input column -->
+        <button type="submit" class="btn btn-primary">Predict</button>
+    </form>
+</div>
+
+
+{% endblock %}

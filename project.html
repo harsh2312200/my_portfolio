@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<!-- Projects Section -->
+<!-- Projects Section -->
+<section id="projects" class="projects-section" style="background-image: url('/static/images/bg/7.jpg'); background-size: cover; background-position: center; padding-top: 50px;">
+  <div class="container">
+    <h2 class="text-center" style="color: #666;" >Projects</h2>
+
+    <!-- Data Science Projects -->
+       <!-- Projects Section -->
+    <div class="container mt-5 pt-5">
+        <div class="row">
+            <div class="col-md-12" style="color: #666;">
+                <h3>Data Science Projects</h3>
+            </div>
+            <!-- Project 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card project-card custom-card-bg">
+                    <img src="/static/images/projects/4.jpg" class="card-img-top" alt="Project 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 1: Diabetes Prediction</h5>
+                        <p class="card-text">
+This project develops a machine learning model to predict whether a user is diabetic based on their input health metrics. The model analyzes health data to classify the user as diabetic or non-diabetic, aiding in medical diagnosis..</p>
+                        <a href="/1_project_ds.html" class="btn btn-primary">View Project</a>
+                        <a href="#" class="btn btn-secondary">Source Code</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card project-card custom-card-bg">
+                    <img src="/static/images/projects/5.jpg" class="card-img-top" alt="Project 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 2: Bank Customer Revenue Prediction</h5>
+                        <p class="card-text">This project classifies bank customers into high revenue and low revenue segments based on their personal and financial data. It helps banks target their marketing efforts more effectively by identifying high-value customers.</p>
+                        <a href="/2_project_ds.html" class="btn btn-primary">View Project</a>
+                        <a href='/2_source_code.html' class="btn btn-secondary">Source Code</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card project-card custom-card-bg">
+                    <img src="/static/images/projects/6.jpg" class="card-img-top" alt="Project 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 3</h5>
+                        <p class="card-text">The Tata Stock Price Prediction project utilizes machine learning and data analysis to forecast Tata stock prices accurately. It aids investors and traders in making informed decisions, guiding them towards their investment objectives.</p>
+                        <a href="/3_project_ds.html" class="btn btn-primary">View Project</a>
+                        <a href="/3_source_code.html" class="btn btn-secondary">Source Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Section</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+
+        body {
+            background-image: url('/static/images/skills/16.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+    body {
+      background-color: #343a40;
+      color: white;
+    }
+    .social-icon {
+      width: 32px;
+      height: 32px;
+      margin-right: 10px;
+    }
+    a {
+      color: white;
+    }
+    a:hover {
+      color: #d3d3d3;
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-transparent fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('home') }}">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('projects') }}">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('skills') }}">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('certificates') }}">Certificates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('contact') }}">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+  <style>
+    .social-icon {
+      width: 32px;
+      height: 32px;
+      margin-right: 10px;
+    }
+  </style>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center">Contact Me</h1>
+    <p class="text-center">I am always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Feel free to contact me using the information below or connect with me on social media.</p>
+
+    <!-- Contact Information -->
+    <div class="row mt-5">
+      <div class="col-lg-6 mb-4 text-center">
+        <h2>Email</h2>
+        <p><i class="fas fa-envelope"></i> harshkadam997@gmail.com</p>
+      </div>
+      <div class="col-lg-6 mb-4 text-center">
+        <h2>Phone</h2>
+        <p><i class="fas fa-phone"></i> 8799869547</p>
+      </div>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="row mt-5">
+      <div class="col-lg-2 offset-lg-3 col-md-4 mb-4 text-center">
+        <a href="https://www.linkedin.com/in/harsh-kadam-198511292/" target="_blank">
+          <img src="/static/icons/linkedin.png" alt="LinkedIn" class="social-icon">
+          LinkedIn
+        </a>
+      </div>
+      <div class="col-lg-2 col-md-4 mb-4 text-center">
+        <a href="https://x.com/harshkadam997" target="_blank">
+          <img src="/static/icons/twitter.png" alt="Twitter" class="social-icon">
+          Twitter
+        </a>
+      </div>
+      <div class="col-lg-2 col-md-4 mb-4 text-center">
+        <a href="https://github.com/harsh2312200" target="_blank">
+          <img src="/static/icons/github.png" alt="GitHub" class="social-icon">
+          GitHub
+        </a>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Input Form</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2>User Input Form</h2>
+        <form action="/predict_second" method="post">
+            <div class="form-group">
+                <label for="REF_NO">Reference Number:</label>
+                <input type="text" class="form-control" id="REF_NO" name="REF_NO" required>
+            </div>
+            <div class="form-group">
+                <label for="children">Number of Children:</label>
+                <input type="text" class="form-control" id="children" name="children" required>
+            </div>
+            <div class="form-group">
+                <label for="age_band">Age Band:</label>
+                <input type="text" class="form-control" id="age_band" name="age_band" required>
+            </div>
+            <div class="form-group">
+                <label for="status">Status:</label>
+                <input type="text" class="form-control" id="status" name="status" required>
+            </div>
+            <div class="form-group">
+                <label for="occupation">Occupation:</label>
+                <input type="text" class="form-control" id="occupation" name="occupation" required>
+            </div>
+            <div class="form-group">
+                <label for="occupation_partner">Occupation Partner:</label>
+                <input type="text" class="form-control" id="occupation_partner" name="occupation_partner" required>
+            </div>
+            <div class="form-group">
+                <label for="home_status">Home Status:</label>
+                <input type="text" class="form-control" id="home_status" name="home_status" required>
+            </div>
+            <div class="form-group">
+                <label for="family_income">Family Income:</label>
+                <input type="text" class="form-control" id="family_income" name="family_income" required>
+            </div>
+            <div class="form-group">
+                <label for="self_employed">Self Employed:</label>
+                <input type="text" class="form-control" id="self_employed" name="self_employed" required>
+            </div>
+            <div class="form-group">
+                <label for="self_employed_partner">Self Employed Partner:</label>
+                <input type="text" class="form-control" id="self_employed_partner" name="self_employed_partner" required>
+            </div>
+            <div class="form-group">
+                <label for="year_last_moved">Year Last Moved:</label>
+                <input type="text" class="form-control" id="year_last_moved" name="year_last_moved" required>
+            </div>
+            <div class="form-group">
+                <label for="TVarea">TV Area:</label>
+                <input type="text" class="form-control" id="TVarea" name="TVarea" required>
+            </div>
+            <div class="form-group">
+                <label for="post_code">Post Code:</label>
+                <input type="text" class="form-control" id="post_code" name="post_code" required>
+            </div>
+            <div class="form-group">
+                <label for="post_area">Post Area:</label>
+                <input type="text" class="form-control" id="post_area" name="post_area" required>
+            </div>
+            <div class="form-group">
+                <label for="Average_Credit_Card_Transaction">Average Credit Card Transaction:</label>
+                <input type="text" class="form-control" id="Average_Credit_Card_Transaction" name="Average_Credit_Card_Transaction" required>
+            </div>
+            <div class="form-group">
+                <label for="Balance_Transfer">Balance Transfer:</label>
+                <input type="text" class="form-control" id="Balance_Transfer" name="Balance_Transfer" required>
+            </div>
+            <div class="form-group">
+                <label for="Term_Deposit">Term Deposit:</label>
+                <input type="text" class="form-control" id="Term_Deposit" name="Term_Deposit" required>
+            </div>
+            <div class="form-group">
+                <label for="Life_Insurance">Life Insurance:</label>
+                <input type="text" class="form-control" id="Life_Insurance" name="Life_Insurance" required>
+            </div>
+            <div class="form-group">
+                <label for="Medical_Insurance">Medical Insurance:</label>
+                <input type="text" class="form-control" id="Medical_Insurance" name="Medical_Insurance" required>
+            </div>
+            <div class="form-group">
+                <label for="Average_A_C_Balance">Average A/C Balance:</label>
+                <input type="text" class="form-control" id="Average_A_C_Balance" name="Average_A_C_Balance" required>
+            </div>
+            <div class="form-group">
+                <label for="Personal_Loan">Personal Loan:</label>
+                <input type="text" class="form-control" id="Personal_Loan" name="Personal_Loan" required>
+            </div>
+            <div class="form-group">
+                <label for="Investment_in_Mutual_Fund">Investment in Mutual Fund:</label>
+                <input type="text" class="form-control" id="Investment_in_Mutual_Fund" name="Investment_in_Mutual_Fund" required>
+            </div>
+            <div class="form-group">
+                <label for="Investment_Tax_Saving_Bond">Investment Tax Saving Bond:</label>
+                <input type="text" class="form-control" id="Investment_Tax_Saving_Bond" name="Investment_Tax_Saving_Bond" required>
+            </div>
+            <div class="form-group">
+                <label for="Home_Loan">Home Loan:</label>
+                <input type="text" class="form-control" id="Home_Loan" name="Home_Loan" required>
+            </div>
+            <div class="form-group">
+                <label for="Online_Purchase_Amount">Online Purchase Amount:</label>
+                <input type="text" class="form-control" id="Online_Purchase_Amount" name="Online_Purchase_Amount" required>
+            </div>
+            <div class="form-group">
+                <label for="Revenue_Grid">Revenue Grid:</label>
+                <input type="text" class="form-control" id="Revenue_Grid" name="Revenue_Grid" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <input type="text" class="form-control" id="gender" name="gender" required>
+            </div>
+            <div class="form-group">
+                <label for="region">Region:</label>
+                <input type="text" class="form-control" id="region" name="region" required>
+            </div>
+            <div class="form-group">
+                <label for="Investment_in_Commodity">Investment in Commodity:</label>
+                <input type="text" class="form-control" id="Investment_in_Commodity" name="Investment_in_Commodity" required>
+            </div>
+            <div class="form-group">
+                <label for="Investment_in_Equity">Investment in Equity:</label>
+                <input type="text" class="form-control" id="Investment_in_Equity" name="Investment_in_Equity" required>
+            </div>
+            <div class="form-group">
+                <label for="Investment_in_Derivative">Investment in Derivative:</label>
+                <input type="text" class="form-control" id="Investment_in_Derivative" name="Investment_in_Derivative" required>
+            </div>
+            <div class="form-group">
+                <label for="Portfolio_Balance">Portfolio Balance:</label>
+                <input type="text" class="form-control" id="Portfolio_Balance" name="Portfolio_Balance" required>
+            </div>
+            <!-- Add more input fields for other columns -->
+            <!-- Repeat the above code for each input column -->
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Section</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        .about-section {
+            text-align: center
+            padding: 50px 0;
+        }
+        .about-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .about-section img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        body {
+            background-image: url('/static/images/bg/7.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .about-section p {
+            color: #007bff;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .social-icon {
+            width: 30px;
+            height: auto;
+            margin-right: 5px;
+        }
+        .contact-section {
+            padding: 50px 0;
+        }
+        .contact-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+        .contact-section p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .social-icon {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+        .social-icon:hover {
+            opacity: 0.7;
+        }
+        .contact-section a {
+            color: #fff;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .contact-section a:hover {
+            color: #ddd;
+        }
+        .navbar-transparent {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .navbar-transparent .navbar-nav .nav-link {
+            color: white;
+            transition: transform 0.3s, color 0.3s;
+        }
+        .navbar-transparent .navbar-nav .nav-link:hover {
+            color: #ddd;
+            transform: scale(1.1);
+        }
+        .custom-card-bg {
+            background-color: #f8f9fa;
+        }
+        .project-card {
+            height: 450px;
+        }
+        .project-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .project-card .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+         .project-card {
+            height: 550px; /* Set a fixed height for the card containers */
+            display: flex;
+            flex-direction: column;
+        }
+        /* Adjusted button width and padding */
+        .project-card {
+            height: 550px; /* Set a fixed height for the card containers */
+            position: relative; /* Set the position of the card container to relative */
+        }
+        .project-card .btn-container {
+            position: absolute; /* Set the position of the button container to absolute */
+            bottom: 0; /* Align the button container to the bottom */
+            width: 100%; /* Set the width to 100% */
+            padding: 20px; /* Add padding */
+            text-align: center; /* Center-align the buttons */
+        }
+        .project-card .btn {
+            width: 80%; /* Adjust the width as needed */
+            margin: 5px auto; /* Center the buttons horizontally */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-transparent fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('home') }}">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('projects') }}">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('skills') }}">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('certificates') }}">Certificates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('contact') }}">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<div class="container">
+    <h1 class="text-center mt-5" style="color: #FFFF;">.</h1>
+    <h2 class="text-center mt-5" style="color: #FFFF;">Prediction Result</h2>
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            {% if prediction == 0 %}
+                <div class="alert alert-success" role="alert">
+                    You are safe
+                </div>
+            {% else %}
+                <div class="alert alert-danger" role="alert">
+                    You are diabetic Rest in Peace
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
